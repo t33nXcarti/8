@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Барон — Щенята-Котята</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        header {
+            background-color: #4a90d9;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .pet-page {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #4a90d9;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .pet-header {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .pet-header img {
+            width: 400px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .pet-details {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .pet-details h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin: 0 0 5px 0;
+        }
+
+        .pet-details .pet-type-label {
+            color: #4a90d9;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .info-table td {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            font-size: 15px;
+        }
+
+        .info-table td:first-child {
+            color: #999;
+            width: 150px;
+        }
+
+        .info-table td:last-child {
+            color: #333;
+            font-weight: bold;
+        }
+
+        .status-available {
+            display: inline-block;
+            background-color: #d4f7d4;
+            color: #2d7a2d;
+            padding: 6px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .section-block {
+            margin-bottom: 35px;
+        }
+
+        .section-block h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #e8f0fe;
+        }
+
+        .section-block p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .health-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .health-list li {
+            padding: 8px 0;
+            font-size: 15px;
+            color: #555;
+            border-bottom: 1px solid #eee;
+        }
+
+        .health-list li strong {
+            color: #2c3e50;
+        }
+
+        .adopt-box {
+            background-color: #e8f0fe;
+            border-radius: 6px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .adopt-box h3 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+            font-size: 22px;
+        }
+
+        .adopt-box p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .adopt-box .phone {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4a90d9;
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4a90d9;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #357abd;
+        }
+
+        .other-pets {
+            margin-top: 40px;
+        }
+
+        .other-pets h3 {
+            font-size: 20px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .other-pets-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .other-pet-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 15px;
+            width: 180px;
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .other-pet-card img {
+            width: 100%;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+
+        .other-pet-card h4 {
+            margin: 10px 0 3px 0;
+            font-size: 16px;
+        }
+
+        .other-pet-card span {
+            font-size: 13px;
+            color: #999;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ccc;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #4a90d9;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Щенята-Котята</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="pets.html">Наши питомцы</a>
+            <a href="volunteer.html">Волонтёрам</a>
+        </nav>
+    </header>
+
+    <div class="pet-page">
+        <a href="pets.html" class="back-link">&larr; Назад к списку питомцев</a>
+
+        <div class="pet-header">
+            <img src="https://placehold.co/600x450/d4e4f7/4a90d9?text=Барон" alt="Барон">
+            <div class="pet-details">
+                <h2>Барон</h2>
+                <div class="pet-type-label">Собака, дворняга</div>
+                <table class="info-table">
+                    <tr>
+                        <td>Возраст</td>
+                        <td>2 года</td>
+                    </tr>
+                    <tr>
+                        <td>Пол</td>
+                        <td>Мальчик</td>
+                    </tr>
+                    <tr>
+                        <td>Размер</td>
+                        <td>Средний</td>
+                    </tr>
+                    <tr>
+                        <td>Окрас</td>
+                        <td>Чёрно-рыжий</td>
+                    </tr>
+                    <tr>
+                        <td>В приюте с</td>
+                        <td>Январь 2026</td>
+                    </tr>
+                    <tr>
+                        <td>Статус</td>
+                        <td><span class="status-available">Ищет дом</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="section-block">
+            <h3>О Бароне</h3>
+            <p>Барон попал к нам в приют в январе 2026 года. Его нашли на улице, замёрзшего и голодного. Несмотря на тяжёлое прошлое, Барон очень доверчивый и ласковый пёс. Он быстро привык к людям и теперь с радостью встречает каждого, кто приходит в приют.</p>
+            <p>Барон отлично ладит с детьми и другими собаками. Он приучен к прогулкам на поводке, знает базовые команды «сидеть» и «дай лапу». Барон будет идеальным компаньоном для активной семьи.</p>
+        </div>
+
+        <div class="section-block">
+            <h3>Здоровье</h3>
+            <ul class="health-list">
+                <li><strong>Прививки:</strong> все плановые прививки сделаны</li>
+                <li><strong>Стерилизация:</strong> кастрирован</li>
+                <li><strong>Обработка от паразитов:</strong> проведена</li>
+                <li><strong>Чип:</strong> установлен</li>
+                <li><strong>Хронические заболевания:</strong> не обнаружены</li>
+            </ul>
+        </div>
+
+        <div class="section-block">
+            <h3>Характер</h3>
+            <p>Барон — спокойный, уравновешенный и очень преданный. Он не склонен к агрессии, хорошо переносит одиночество, но всё же предпочитает компанию людей. Любит долгие прогулки, игры с мячом и поглаживания по голове. В вольере ведёт себя тихо и не беспокоит соседей.</p>
+        </div>
+
+        <div class="adopt-box">
+            <h3>Хотите забрать Барона домой?</h3>
+            <p>Позвоните нам или оставьте заявку, и мы расскажем обо всех условиях усыновления.</p>
+            <div class="phone">+7 (999) 123-45-67</div>
+            <a href="volunteer.html" class="btn">Стать волонтёром</a>
+        </div>
+
+        <div class="other-pets">
+            <h3>Другие питомцы</h3>
+            <div class="other-pets-grid">
+                <a href="pet.html" class="other-pet-card">
+                    <img src="https://placehold.co/200x160/f7d4d4/d94a4a?text=Муся" alt="Муся">
+                    <h4>Муся</h4>
+                    <span>Кошка, 1 год</span>
+                </a>
+                <a href="pet.html" class="other-pet-card">
+                    <img src="https://placehold.co/200x160/d4f7d4/4ad96a?text=Рекс" alt="Рекс">
+                    <h4>Рекс</h4>
+                    <span>Щенок, 6 мес.</span>
+                </a>
+                <a href="pet.html" class="other-pet-card">
+                    <img src="https://placehold.co/200x160/f7f0d4/d9b84a?text=Рыжик" alt="Рыжик">
+                    <h4>Рыжик</h4>
+                    <span>Кот, 3 года</span>
+                </a>
+                <a href="pet.html" class="other-pet-card">
+                    <img src="https://placehold.co/200x160/d4e4f7/4a90d9?text=Тузик" alt="Тузик">
+                    <h4>Тузик</h4>
+                    <span>Собака, 4 года</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Щенята-Котята &copy; 2026 | Приют для бездомных животных</p>
+        <p>Адрес: г. Москва, ул. Лесная, д. 12 | Телефон: +7 (999) 123-45-67</p>
+    </footer>
+
+</body>
+</html>

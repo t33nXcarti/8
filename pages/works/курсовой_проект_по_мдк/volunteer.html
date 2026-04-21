@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Волонтёрам — Щенята-Котята</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        header {
+            background-color: #4a90d9;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .page-title {
+            background-color: #e8f0fe;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .page-title h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+        }
+
+        .page-title p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .section {
+            padding: 50px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section h3 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        .section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .help-types {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .help-type {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 25px;
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .help-type h4 {
+            margin: 0 0 10px 0;
+            color: #4a90d9;
+            font-size: 18px;
+        }
+
+        .help-type p {
+            font-size: 14px;
+            color: #777;
+            margin: 0;
+        }
+
+        .steps {
+            margin: 25px 0;
+        }
+
+        .step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .step:last-child {
+            border-bottom: none;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: #4a90d9;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+            font-size: 18px;
+        }
+
+        .step-content p {
+            margin: 0;
+            font-size: 15px;
+            color: #777;
+        }
+
+        .form-container {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 35px;
+            margin-top: 25px;
+        }
+
+        .form-container h3 {
+            margin: 0 0 20px 0;
+            font-size: 22px;
+            color: #2c3e50;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 15px;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            background-color: #fafafa;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #4a90d9;
+            background-color: white;
+        }
+
+        .submit-btn {
+            background-color: #4a90d9;
+            color: white;
+            border: none;
+            padding: 12px 35px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+
+        .submit-btn:hover {
+            background-color: #357abd;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .faq-item h4 {
+            margin: 0 0 8px 0;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+
+        .faq-item p {
+            margin: 0;
+            font-size: 15px;
+            color: #777;
+        }
+
+        .contact-info {
+            background-color: #e8f0fe;
+            border-radius: 6px;
+            padding: 30px;
+            margin-top: 25px;
+        }
+
+        .contact-info h3 {
+            margin: 0 0 15px 0;
+            color: #2c3e50;
+        }
+
+        .contact-info p {
+            margin: 8px 0;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .contact-info strong {
+            color: #2c3e50;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ccc;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #4a90d9;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Щенята-Котята</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="pets.html">Наши питомцы</a>
+            <a href="volunteer.html">Волонтёрам</a>
+        </nav>
+    </header>
+
+    <div class="page-title">
+        <h2>Стать волонтёром</h2>
+        <p>Ваша помощь может изменить жизнь бездомного животного</p>
+    </div>
+
+    <div class="section">
+        <h3>Чем можно помочь</h3>
+        <p>Мы рады любой помощи. Даже несколько часов в неделю могут значительно улучшить жизнь наших подопечных.</p>
+        <div class="help-types">
+            <div class="help-type">
+                <h4>Прогулки с собаками</h4>
+                <p>Выгуливайте наших собак, помогайте им социализироваться и готовиться к жизни в семье.</p>
+            </div>
+            <div class="help-type">
+                <h4>Помощь с кошками</h4>
+                <p>Кормите, играйте и социализируйте котят и взрослых кошек в приюте.</p>
+            </div>
+            <div class="help-type">
+                <h4>Транспортировка</h4>
+                <p>Помогите доставить животных к ветеринару или в новый дом. Нужен автомобиль.</p>
+            </div>
+            <div class="help-type">
+                <h4>Фото и реклама</h4>
+                <p>Делайте качественные фотографии питомцев и помогайте вести соцсети приюта.</p>
+            </div>
+            <div class="help-type">
+                <h4>Временная передержка</h4>
+                <p>Возьмите животное к себе домой на время, пока мы ищем ему постоянный дом.</p>
+            </div>
+            <div class="help-type">
+                <h4>Хозяйственная помощь</h4>
+                <p>Помогите с уборкой помещений, ремонтом вольеров и другими бытовыми задачами.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Как стать волонтёром</h3>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h4>Заполните анкету</h4>
+                    <p>Заполните форму ниже и расскажите нам о себе и о том, чем хотели бы помочь.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h4>Свяжитесь с нами</h4>
+                    <p>Мы свяжемся с вами в течение 2-3 дней, чтобы обсудить детали и ответить на вопросы.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h4>Приходите на знакомство</h4>
+                    <p>Приезжайте в приют, познакомьтесь с животными и нашим координатором волонтёров.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                    <h4>Начните помогать</h4>
+                    <p>Выберите удобный график и начните помогать. Мы проведём инструктаж и всему научим.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h3>Частые вопросы</h3>
+        <div class="faq-item">
+            <h4>С какого возраста можно стать волонтёром?</h4>
+            <p>Принимаем волонтёров с 16 лет. Лица до 18 лет допускаются только в сопровождении взрослых.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Сколько времени нужно уделять?</h4>
+            <p>Минимум — 4 часа в неделю. Но вы можете помогать и чаще, всё зависит от вашего желания и возможностей.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Нужен ли опыт работы с животными?</h4>
+            <p>Нет, опыт не обязателен. Мы всему научим и проведём инструктаж перед первой работой.</p>
+        </div>
+        <div class="faq-item">
+            <h4>Можно ли помочь деньгами или вещами?</h4>
+            <p>Да, мы принимаем корм, лекарства, подстилки и другие нужные вещи. Подробности уточняйте по телефону.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="form-container">
+            <h3>Анкета волонтёра</h3>
+            <form>
+                <div class="form-group">
+                    <label>Ваше имя</label>
+                    <input type="text" placeholder="Введите ваше имя">
+                </div>
+                <div class="form-group">
+                    <label>Телефон</label>
+                    <input type="tel" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="form-group">
+                    <label>Электронная почта</label>
+                    <input type="email" placeholder="example@mail.ru">
+                </div>
+                <div class="form-group">
+                    <label>Ваш возраст</label>
+                    <select>
+                        <option>16–17 лет</option>
+                        <option>18–25 лет</option>
+                        <option>26–35 лет</option>
+                        <option>36–50 лет</option>
+                        <option>Старше 50 лет</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Чем хотели бы помочь?</label>
+                    <select>
+                        <option>Прогулки с собаками</option>
+                        <option>Помощь с кошками</option>
+                        <option>Транспортировка</option>
+                        <option>Фото и реклама</option>
+                        <option>Временная передержка</option>
+                        <option>Хозяйственная помощь</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Расскажите о себе</label>
+                    <textarea placeholder="Есть ли у вас опыт работы с животными? Сколько времени готовы уделять?"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Отправить заявку</button>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <h3>Контакты для связи</h3>
+            <p><strong>Адрес:</strong> г. Москва, ул. Лесная, д. 12</p>
+            <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+            <p><strong>Email:</strong> volunteer@shenyata-kotyata.ru</p>
+            <p><strong>Часы работы:</strong> Ежедневно с 9:00 до 18:00</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Щенята-Котята &copy; 2026 | Приют для бездомных животных</p>
+        <p>Адрес: г. Москва, ул. Лесная, д. 12 | Телефон: +7 (999) 123-45-67</p>
+    </footer>
+
+</body>
+</html>

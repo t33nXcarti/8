@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задания CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>МАКСИМ АНТОНОВ</h1>
+    <h1>Задание 1 - Изменение цвета фона</h1>
+    <div class="box1">Блок</div>
+
+    <h1>Задание 2 - Изменение формы</h1>
+    <div class="box2">Блок</div>
+
+    <h1>Задание 3 - Карточки с трансформацией</h1>
+    <div class="container">
+        <div class="card">Карточка 1</div>
+        <div class="card">Карточка 2</div>
+        <div class="card">Карточка 3</div>
+        <div class="card">Карточка 4</div>
+    </div>
+
+    <h1>Задание 5 - Анимация движения шарика</h1>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+
+    <h1>Задание 5 (доп.) - Исчезновение текста</h1>
+    <div class="fade-text">Этот текст исчезает</div>
+    <button onclick="restartFade()">Повторить</button>
+
+    <h1>Задание 6 - 3D вращение и трансформации</h1>
+    <div class="original box spin">
+        <figure class="box box-1">box-1</figure>
+    </div>
+
+    <h1>Задание 7 - Перемещение объекта </h1>
+    <div class="track">
+        <div class="red-dot"></div>
+    </div>
+
+    <script>
+        function restartFade() {
+            let text = document.querySelector('.fade-text');
+            text.style.animation = 'none';
+            setTimeout(() => {
+                text.style.animation = 'fadeOut 2s forwards';
+            }, 10);
+        }
+    </script>
+</body>
+</html>

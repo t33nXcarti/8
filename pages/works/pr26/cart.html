@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина заказов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+</head>
+<body>
+    <header class="header">
+        <a href="menu.html" class="back-btn">←</a>
+        <h1>Your Cart</h1>
+        <div class="header-spacer"></div>
+    </header>
+
+    <main class="cart-content">
+        <div class="cart-item">
+            <div class="item-image" style="background: linear-gradient(135deg, #ff6b6b, #feca57);"></div>
+            <div class="item-details">
+                <h3 class="item-name">Margherita Pizza</h3>
+                <p class="item-price">₽890</p>
+            </div>
+            <div class="quantity-controls">
+                <button class="qty-btn minus">−</button>
+                <span class="quantity">2</span>
+                <button class="qty-btn plus">+</button>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <div class="item-image" style="background: linear-gradient(135deg, #54a0ff, #5f27cd);"></div>
+            <div class="item-details">
+                <h3 class="item-name">Caesar Salad</h3>
+                <p class="item-price">₽650</p>
+            </div>
+            <div class="quantity-controls">
+                <button class="qty-btn minus">−</button>
+                <span class="quantity">1</span>
+                <button class="qty-btn plus">+</button>
+            </div>
+        </div>
+
+        <div class="cart-item">
+            <div class="item-image" style="background: linear-gradient(135deg, #ff9ff3, #feca57);"></div>
+            <div class="item-details">
+                <h3 class="item-name">Cola 0.5L</h3>
+                <p class="item-price">₽150</p>
+            </div>
+            <div class="quantity-controls">
+                <button class="qty-btn minus">−</button>
+                <span class="quantity">3</span>
+                <button class="qty-btn plus">+</button>
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <h2 class="summary-title">Order Summary</h2>
+            
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span>₽2,580</span>
+            </div>
+            
+            <div class="summary-row">
+                <span>Delivery fee</span>
+                <span>₽150</span>
+            </div>
+            
+            <div class="summary-row">
+                <span>Service fee</span>
+                <span>₽40</span>
+            </div>
+            
+            <div class="summary-row total">
+                <span>Total</span>
+                <span>₽2,770</span>
+            </div>
+        </div>
+
+        <div class="delivery-section">
+            <h3 class="section-title">Delivery Address</h3>
+            <div class="address-box">
+                <span>📍</span>
+                <p>123 Leninsky Prospekt, Apt 45, Moscow</p>
+                <a href="#" class="edit-link">Edit →</a>
+            </div>
+        </div>
+
+        <div class="payment-section">
+            <h3 class="section-title">Payment Method</h3>
+            <div class="payment-options">
+                <button class="payment-btn active">Card</button>
+                <button class="payment-btn">Cash</button>
+                <button class="payment-btn">Online</button>
+            </div>
+        </div>
+
+        <div class="delivery-time">
+            <h3 class="section-title">Delivery Time</h3>
+            <select class="time-select">
+                <option>ASAP (30-40 min)</option>
+                <option>Today 18:30-19:00</option>
+                <option>Today 19:00-19:30</option>
+                <option>Tomorrow 12:00-12:30</option>
+            </select>
+        </div>
+
+        <button class="confirm-order-btn">Confirm Order</button>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="menu.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="cart.html" class="nav-item active">
+            <span class="nav-icon">🛒</span>
+            <span class="nav-text">Cart</span>
+            <span class="badge">3</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span class="nav-text">Profile</span>
+        </a>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой профиль</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+</head>
+<body>
+    <header class="header">
+        <h1>My Profile</h1>
+    </header>
+
+    <main class="profile-content">
+        <div class="profile-header">
+            <div class="avatar" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                <span>👤</span>
+            </div>
+            <h2 class="user-name">John Doe</h2>
+            <p class="user-email">john.doe@email.com</p>
+            <p class="user-phone">+7 (999) 123-45-67</p>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Order History</h3>
+            
+            <div class="order-card">
+                <div class="order-header">
+                    <div class="order-info">
+                        <span class="order-date">March 15, 2026</span>
+                        <span class="order-restaurant">🍕 Pizza House</span>
+                    </div>
+                    <span class="order-status delivered">Delivered</span>
+                </div>
+                <div class="order-items">
+                    <p>Margherita Pizza x2, Cola 0.5L</p>
+                </div>
+                <div class="order-footer">
+                    <span class="order-total">₽1,930</span>
+                    <button class="reorder-btn">Reorder</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <div class="order-header">
+                    <div class="order-info">
+                        <span class="order-date">March 12, 2026</span>
+                        <span class="order-restaurant">🍣 Sushi Bar</span>
+                    </div>
+                    <span class="order-status in-progress">In Progress</span>
+                </div>
+                <div class="order-items">
+                    <p>Salmon Roll x3, Miso Soup</p>
+                </div>
+                <div class="order-footer">
+                    <span class="order-total">₽2,450</span>
+                    <button class="reorder-btn">Reorder</button>
+                </div>
+            </div>
+
+            <div class="order-card">
+                <div class="order-header">
+                    <div class="order-info">
+                        <span class="order-date">March 10, 2026</span>
+                        <span class="order-restaurant">🍔 Burger King</span>
+                    </div>
+                    <span class="order-status cancelled">Cancelled</span>
+                </div>
+                <div class="order-items">
+                    <p>Whopper x2, Fries, Cola</p>
+                </div>
+                <div class="order-footer">
+                    <span class="order-total">₽1,200</span>
+                    <button class="reorder-btn">Reorder</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-title">Settings</h3>
+            
+            <div class="settings-list">
+                <a href="#" class="settings-item">
+                    <span class="settings-icon">👤</span>
+                    <span>Edit Profile</span>
+                    <span class="arrow">→</span>
+                </a>
+                
+                <a href="#" class="settings-item">
+                    <span class="settings-icon">📍</span>
+                    <span>Addresses</span>
+                    <span class="arrow">→</span>
+                </a>
+                
+                <a href="#" class="settings-item">
+                    <span class="settings-icon">💳</span>
+                    <span>Payment Methods</span>
+                    <span class="arrow">→</span>
+                </a>
+                
+                <a href="#" class="settings-item">
+                    <span class="settings-icon">🔔</span>
+                    <span>Notifications</span>
+                    <span class="arrow">→</span>
+                </a>
+                
+                <a href="#" class="settings-item">
+                    <span class="settings-icon">🌙</span>
+                    <span>Dark Mode</span>
+                    <label class="toggle">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </a>
+                
+                <a href="#" class="settings-item">
+                    <span class="settings-icon">❓</span>
+                    <span>Support</span>
+                    <span class="arrow">→</span>
+                </a>
+                
+                <a href="#" class="settings-item">
+                    <span class="settings-icon">🚪</span>
+                    <span>Logout</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="menu.html" class="nav-item">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="cart.html" class="nav-item">
+            <span class="nav-icon">🛒</span>
+            <span class="nav-text">Cart</span>
+            <span class="badge">3</span>
+        </a>
+        <a href="profile.html" class="nav-item active">
+            <span class="nav-icon">👤</span>
+            <span class="nav-text">Profile</span>
+        </a>
+    </nav>
+</body>
+</html>

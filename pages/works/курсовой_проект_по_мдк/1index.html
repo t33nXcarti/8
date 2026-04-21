@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Щенята-Котята — Приют для животных</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        header {
+            background-color: #4a90d9;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: #e8f0fe;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #4a90d9;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #357abd;
+        }
+
+        .section {
+            padding: 50px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .section h2 {
+            font-size: 26px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 25px;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #4a90d9;
+        }
+
+        .info-block {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .info-block img {
+            width: 400px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        .info-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .info-text p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .stats {
+            display: flex;
+            gap: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .stat {
+            flex: 1;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 30px 20px;
+        }
+
+        .stat .number {
+            font-size: 36px;
+            font-weight: bold;
+            color: #4a90d9;
+        }
+
+        .stat .label {
+            margin-top: 8px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ccc;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #4a90d9;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Щенята-Котята</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="pets.html">Наши питомцы</a>
+            <a href="volunteer.html">Волонтёрам</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h2>Подари дом тому, кто ждёт</h2>
+        <p>Мы — приют для бездомных щенков и котят. Помогаем животным найти любящую семью и заботливых хозяев.</p>
+        <a href="pets.html" class="btn">Наши питомцы</a>
+    </div>
+
+    <div class="section">
+        <h2>Чем мы занимаемся</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Спасение</h3>
+                <p>Подбираем бездомных щенков и котят с улиц, оказываем им первую помощь и заботу.</p>
+            </div>
+            <div class="card">
+                <h3>Лечение</h3>
+                <p>Все животные проходят осмотр у ветеринара, получают необходимые прививки и лечение.</p>
+            </div>
+            <div class="card">
+                <h3>Пристройство</h3>
+                <p>Ищем ответственных хозяев и помогаем животным обрести новый дом и семью.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Наш приют в цифрах</h2>
+        <div class="stats">
+            <div class="stat">
+                <div class="number">350+</div>
+                <div class="label">Животных пристроено</div>
+            </div>
+            <div class="stat">
+                <div class="number">45</div>
+                <div class="label">Питомцев сейчас в приюте</div>
+            </div>
+            <div class="stat">
+                <div class="number">120</div>
+                <div class="label">Волонтёров помогают нам</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Как помочь приюту</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Стать волонтёром</h3>
+                <p>Приходите гулять с собаками, кормить котят или помогать с уборкой. Любая помощь важна.</p>
+                <a href="volunteer.html" class="btn">Узнать больше</a>
+            </div>
+            <div class="card">
+                <h3>Забрать питомца</h3>
+                <p>Посмотрите наших питомцев и, возможно, один из них станет вашим лучшим другом.</p>
+                <a href="pets.html" class="btn">Смотреть питомцев</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Щенята-Котята &copy; 2026 | Приют для бездомных животных</p>
+        <p>Адрес: г. Москва, ул. Лесная, д. 12 | Телефон: +7 (999) 123-45-67</p>
+    </footer>
+
+</body>
+</html>

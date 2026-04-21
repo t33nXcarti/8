@@ -1,0 +1,86 @@
+.line{
+  list-style:none;
+}
+
+.line li{
+  display:inline-block;
+  text-align:center;
+  padding: 20px;
+  background: lightcoral;
+  margin: 20px;
+}
+
+.links{
+  width:320px;
+}
+
+.links a{
+  display:block;
+  text-decoration:none;
+  background:blue;    
+  color:white;
+  padding:6px 12px;
+  margin:5px;
+}
+
+.blocks{
+  margin: 40px;
+}
+
+.blocks div{
+  display:inline;
+  padding: 20px;
+  text-align:center;
+  margin: 20px;
+  background:red;
+  color:black;
+}
+
+.blocks .non{ 
+  display:none; 
+}
+
+.links-markers{
+  display: list-item;
+  width:300px;
+  background:black;
+  padding:10px;
+  margin:20px;
+}
+
+.links-markers a{
+  display:block;
+  color:white;
+  margin:20px;
+}
+
+.post1,
+.post2{
+  background:darkred;
+  color:white;
+  padding:10px;
+  margin:10px;
+}
+
+.post1 .image,
+.post2 .image{
+  width:100px;
+  height:100px;
+  background-size:cover;
+  background-position:center;
+  border:2px dashed red;
+}
+
+.post1 .image{ background-image:url("../../../img/weather-sun.jpg"); }
+.post2 .image{ background-image:url("../../../img/weather-sun.jpg"); }
+
+
+.post1 .image{
+  float:left;
+  margin:15px;
+}
+
+.post2 .image{
+  float:right;
+  margin:15px;
+}

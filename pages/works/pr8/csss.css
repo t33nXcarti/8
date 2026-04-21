@@ -1,0 +1,25 @@
+.main {
+    width: 40%;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 0 auto;
+
+}
+ul {
+	text-align: center;
+	list-style-type: none;
+}
+.main2{
+
+}
+
+.img {
+   float: left;
+    margin-right: 15px;
+ }
+.p {
+text-align: right;
+}
+
+.text {
+}

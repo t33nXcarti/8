@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практическая работа №29 | Группа ВР-24-1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">ВР-24-1 Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Услуги</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="container text-center py-5">
+        <h1 class="display-4 fw-bold">Практическая работа №29</h1>
+        <p class="lead text-muted">Использование компонентов Bootstrap</p>
+        <button class="btn btn-primary btn-lg mt-3" data-bs-toggle="modal" data-bs-target="#infoModal">
+            Открыть информацию
+        </button>
+    </header>
+    <main class="container">
+        <section id="services" class="row g-4 mb-5">
+            <div class="col-12 text-center mb-3">
+                <h2>Наши преимущества</h2>
+                <hr>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Адаптивность</h5>
+                        <p class="card-text">Сетка Bootstrap подстраивается под любой экран.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Детали</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Скорость</h5>
+                        <p class="card-text">Оптимизированный код и быстрая загрузка.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Детали</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Дизайн</h5>
+                        <p class="card-text">Современный внешний вид благодаря кастомным стилям.</p>
+                        <a href="#" class="btn btn-outline-primary btn-sm">Детали</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section shadow-sm rounded p-4 mb-5">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3>Обратная связь</h3>
+                    <form>
+                        <div class="mb-3">
+                            <label for="nameInput" class="form-label">Имя</label>
+                            <input type="text" class="form-control" id="nameInput" placeholder="Введите имя">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailInput" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="emailInput" placeholder="name@example.com">
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Отправить</button>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Команда проекта</h3>
+                    <table class="table table-striped table-hover mt-3">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>#</th>
+                                <th>Студент</th>
+                                <th>Роль</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Максим Антонов</td>
+                                <td>HTML Разметка</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Никита Нелюбин</td>
+                                <td>CSS Стилизация</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ПОДВАЛ (Footer) -->
+    <footer class="text-center py-4">
+        <div class="container">
+            <p class="mb-1">&copy; 2024 Группа ВР-24-1</p>
+            <small>Антонов М., Нелюбин Н.</small>
+        </div>
+    </footer>
+
+    <!-- МОДАЛЬНОЕ ОКНО (Modal) -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">О проекте</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Проект выполнен студентами группы <strong>ВР-24-1</strong>.</p>
+                    <p>Использованы компоненты: Navbar, Cards, Forms, Tables, Modal.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрипт Bootstrap (Нужен для работы меню и модальных окон) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

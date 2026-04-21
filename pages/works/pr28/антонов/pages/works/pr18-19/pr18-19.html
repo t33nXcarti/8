@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Interface</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+         
+            background: linear-gradient(135deg, #7ee8fa 0%, #4cb8ea 50%, #3da9e8 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+       
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+            z-index: 1;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+        }
+
+        .card:active {
+            transform: translateY(-2px);
+        }
+
+       
+        h1 {
+            color: #1a1a2e;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+            grid-column: 1 / -1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            color: #2d3748;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        label {
+            display: block;
+            color: #4a5568;
+            font-weight: 500;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .form-group:focus-within label {
+            color: #3182ce;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: #f7fafc;
+            color: #2d3748;
+        }
+
+        input[type="text"]:hover,
+        input[type="email"]:hover,
+        input[type="password"]:hover,
+        textarea:hover,
+        select:hover {
+            border-color: #a0aec0;
+            background: #fff;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #4299e1;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 4px 6px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #4299e1;
+            border: 2px solid #4299e1;
+        }
+
+        .btn-secondary:hover {
+            background: #ebf8ff;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary:active {
+            transform: translateY(0);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+      
+        .checkbox-group,
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .checkbox-label,
+        .radio-label {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+            transition: background 0.2s;
+            color: #4a5568;
+        }
+
+        .checkbox-label:hover,
+        .radio-label:hover {
+            background: #f7fafc;
+        }
+
+        input[type="checkbox"],
+        input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            cursor: pointer;
+            accent-color: #4299e1;
+            transition: transform 0.2s;
+        }
+
+        input[type="checkbox"]:hover,
+        input[type="radio"]:hover {
+            transform: scale(1.1);
+        }
+
+        input[type="checkbox"]:checked + span,
+        input[type="radio"]:checked + span {
+            color: #2b6cb0;
+            font-weight: 500;
+        }
+
+      
+        .toggle-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .toggle {
+            position: relative;
+            width: 60px;
+            height: 32px;
+            background: #cbd5e0;
+            border-radius: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .toggle::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #toggle-checkbox:checked + .toggle {
+            background: #4299e1;
+        }
+
+        #toggle-checkbox:checked + .toggle::after {
+            transform: translateX(28px);
+        }
+
+        #toggle-checkbox {
+            display: none;
+        }
+
+     
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            overflow: hidden;
+            top: 100%;
+            margin-top: 8px;
+        }
+
+        .dropdown-content a {
+            color: #2d3748;
+            padding: 12px 20px;
+            text-decoration: none;
+            display: block;
+            transition: background 0.2s;
+        }
+
+        .dropdown-content a:hover {
+            background: #f7fafc;
+            color: #4299e1;
+        }
+
+      
+        .dropdown:hover .dropdown-content {
+            display: block;
+            animation: fadeIn 0.2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+  
+        .tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .tab-input {
+            display: none;
+        }
+
+        .tab-label {
+            padding: 10px 24px;
+            background: #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+            color: #4a5568;
+        }
+
+        .tab-label:hover {
+            background: #cbd5e0;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s;
+        }
+
+       
+        #tab1:checked ~ .tab-label[for="tab1"],
+        #tab2:checked ~ .tab-label[for="tab2"],
+        #tab3:checked ~ .tab-label[for="tab3"] {
+            background: #4299e1;
+            color: white;
+        }
+
+        #tab1:checked ~ .tab-content[data-tab="1"],
+        #tab2:checked ~ .tab-content[data-tab="2"],
+        #tab3:checked ~ .tab-content[data-tab="3"] {
+            display: block;
+        }
+
+      
+        .modal-trigger {
+            display: none;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            transform: scale(0.9);
+            transition: transform 0.3s;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .modal-close {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 24px;
+            background: #e2e8f0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-weight: 500;
+        }
+
+        .modal-close:hover {
+            background: #cbd5e0;
+        }
+
+       
+        .modal-trigger:checked ~ .modal-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-trigger:checked ~ .modal-overlay .modal-content {
+            transform: scale(1);
+        }
+
+      
+        .accordion {
+            margin: 16px 0;
+        }
+
+        details {
+            background: #f7fafc;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        details:hover {
+            background: #edf2f7;
+        }
+
+        summary {
+            padding: 16px 20px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #2d3748;
+            list-style: none;
+            position: relative;
+            transition: color 0.2s;
+        }
+
+        summary:hover {
+            color: #4299e1;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::after {
+            content: '−';
+        }
+
+        details p {
+            padding: 0 20px 20px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+ 
+        .item-list {
+            list-style: none;
+        }
+
+        .item-list li {
+            padding: 16px;
+            background: #f7fafc;
+            margin-bottom: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .item-list li:hover {
+            background: #edf2f7;
+            transform: translateX(4px);
+        }
+
+        .item-list li:active {
+            transform: translateX(2px);
+        }
+
+        .item-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+
+      
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4299e1 0%, #667eea 100%);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+            width: 0%;
+        }
+
+        .progress-bar:hover .progress-fill {
+            width: 75%;
+        }
+
+       
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .card {
+                padding: 24px;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .btn-group {
+                flex-direction: column;
+            }
+        }
+
+       
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #4299e1;
+            color: white;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+
+        .tooltip::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #2d3748;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s;
+            margin-bottom: 8px;
+        }
+
+        .tooltip:hover::after {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <h1>МАКСИМ АНТОНОВ 18-19ПР</h1>
+    
+    <div class="container">
+        <!-- Карточка с формой -->
+        <div class="card">
+            <h2>Форма входа</h2>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Пароль</label>
+                    <input type="password" id="password" placeholder="••••••••">
+                </div>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox">
+                        <span>Запомнить меня</span>
+                    </label>
+                </div>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Войти</button>
+                    <button type="button" class="btn btn-secondary">Отмена</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Карточка с переключателями -->
+        <div class="card">
+            <h2>Настройки</h2>
+            
+            <div class="toggle-wrapper">
+                <input type="checkbox" id="toggle-checkbox">
+                <label for="toggle-checkbox" class="toggle"></label>
+                <span>Уведомления</span>
+            </div>
+
+            <div class="radio-group">
+                <label class="radio-label">
+                    <input type="radio" name="theme" checked>
+                    <span>Светлая тема</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="theme">
+                    <span>Тёмная тема</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="theme">
+                    <span>Системная</span>
+                </label>
+            </div>
+
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+            <p style="font-size: 0.9rem; color: #718096;">Наведите на прогресс-бар</p>
+        </div>
+
+        <!-- Карточка с вкладками -->
+        <div class="card">
+            <h2>Вкладки <span class="badge">New</span></h2>
+            
+            <div class="tabs">
+                <input type="radio" name="tabs" id="tab1" class="tab-input" checked>
+                <label for="tab1" class="tab-label">Основное</label>
+                
+                <input type="radio" name="tabs" id="tab2" class="tab-input">
+                <label for="tab2" class="tab-label">Дополнительно</label>
+                
+                <input type="radio" name="tabs" id="tab3" class="tab-input">
+                <label for="tab3" class="tab-label">Инфо</label>
+            </div>
+
+            <div class="tab-content" data-tab="1">
+                <p>Содержимое первой вкладки. Здесь может быть любая информация.</p>
+            </div>
+            <div class="tab-content" data-tab="2">
+                <p>Дополнительные настройки и параметры системы.</p>
+            </div>
+            <div class="tab-content" data-tab="3">
+                <p>Информация о системе и версии приложения.</p>
+            </div>
+        </div>
+
+        <!-- Карточка с выпадающим меню -->
+        <div class="card">
+            <h2>Меню</h2>
+            <div class="dropdown">
+                <button class="btn btn-primary">Действия ▼</button>
+                <div class="dropdown-content">
+                    <a href="#">Редактировать</a>
+                    <a href="#">Копировать</a>
+                    <a href="#">Удалить</a>
+                    <a href="#">Экспорт</a>
+                </div>
+            </div>
+
+            <h3 style="margin: 24px 0 16px; color: #2d3748;">Список элементов</h3>
+            <ul class="item-list">
+                <li>
+                    <div class="item-icon">1</div>
+                    <div>
+                        <div style="font-weight: 600;">Элемент 1</div>
+                        <div style="font-size: 0.85rem; color: #718096;">Описание элемента</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-icon">2</div>
+                    <div>
+                        <div style="font-weight: 600;">Элемент 2</div>
+                        <div style="font-size: 0.85rem; color: #718096;">Описание элемента</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="item-icon">3</div>
+                    <div>
+                        <div style="font-weight: 600;">Элемент 3</div>
+                        <div style="font-size: 0.85rem; color: #718096;">Описание элемента</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Карточка с аккордеоном -->
+        <div class="card">
+            <h2>FAQ</h2>
+            <div class="accordion">
+                <details>
+                    <summary>Как это работает?</summary>
+                    <p>Это аккордеон, созданный с помощью HTML5 элементов details и summary. Никакого JavaScript!</p>
+                </details>
+                <details>
+                    <summary>Можно ли использовать?</summary>
+                    <p>Да, это чистый HTML и CSS. Вы можете свободно использовать этот код в своих проектах.</p>
+                </details>
+                <details>
+                    <summary>Поддержка браузеров?</summary>
+                    <p>Details/summary поддерживаются всеми современными браузерами.</p>
+                </details>
+            </div>
+        </div>
+
+        <!-- Карточка с модальным окном -->
+        <div class="card">
+            <h2>Модальное окно</h2>
+            <p style="margin-bottom: 20px; color: #4a5568;">Нажмите кнопку ниже, чтобы открыть модальное окно.</p>
+            
+            <label for="modal-trigger" class="btn btn-primary" style="cursor: pointer;">
+                Открыть модальное окно
+            </label>
+
+            <!-- Модальное окно -->
+            <input type="checkbox" id="modal-trigger" class="modal-trigger">
+            <div class="modal-overlay">
+                <div class="modal-content">
+                    <h3 style="margin-bottom: 16px; color: #2d3748;">Заголовок окна</h3>
+                    <p style="color: #4a5568; line-height: 1.6;">
+                        Это модальное окно, реализованное только на CSS с использованием checkbox hack. 
+                        Закройте окно, нажав на кнопку ниже или на затемнённую область.
+                    </p>
+                    <label for="modal-trigger" class="modal-close" style="cursor: pointer;">
+                        Закрыть
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карточка с тултипами -->
+        <div class="card">
+            <h2>Подсказки</h2>
+            <p style="color: #4a5568; margin-bottom: 16px;">
+                Наведите на <span class="tooltip" data-tooltip="Это всплывающая подсказка!">этот текст</span> 
+                чтобы увидеть тултип.
+            </p>
+            <p style="color: #4a5568;">
+                Ещё один <span class="tooltip" data-tooltip="CSS-only tooltip работает!">пример</span> 
+                без использования JavaScript.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

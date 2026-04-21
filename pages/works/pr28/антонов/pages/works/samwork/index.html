@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <!--Шапка-->
+        <h1 id="10">Персональный сайт Леонгардт Ангелины</h1>
+        <table>
+                <tr>
+                    <td>
+                        <a href="../../../index.html"><button>Главная</button></a>
+                    </td>    
+                    <td>
+                        <a href="../../news.html"><button>Новости</button></a>
+                    </td>
+                    <td>
+                        <a href="../../personal.html"><button>Личный кабинет</button></a>
+                    </td>
+                    <td>
+                        <a href="../../works/work.html"><button>Мои работы</button></a>
+                    </td>
+                </tr>    
+        </table>
+    </header>
+    <form method="post" action="">
+        <input name="mycolor" type="checkbox" value="red" checked>
+        <label>Красный</label>
+        <input name="mycolor" type="checkbox" value="blue" checked>
+        <label>Синий</label>
+        <input name="mycolor" type="checkbox" value="black" checked>
+        <label>Черный</label><br>
+        <input style="margin-top: 30px;" name="mycolor" type="radio" value="white" checked>
+        <label>Белый</label>
+        <input name="mycolor" type="radio" value="green" checked>
+        <label>Зеленый</label>
+        <input name="mycolor" type="radio" value="blue" checked>
+        <label>Синий</label><br>
+        <input style="margin-top: 30px;" type="reset" name="Reset" value="Очистить форму"><br>
+        <input style="margin-top: 30px;" type="text" name="txtName" size="18" maxlength="5" value="Текст по умолчанию"><br>
+        <input style="margin-top: 30px;" type="password" name="txtName" size="18" maxlength="5"><br>
+        <input style="margin-top: 30px;" type="number"><br>
+        <input style="margin-top: 30px;" name="email" type="hidden" value="spam@nospam.ru"><br>
+        <input style="margin-top: 30px;" type="submit" value="отправить заявку">
+        <form enctype="multipart/form-data" action="upload.php"
+        method="post">
+         Загрузить файл: <input name="my_file" type="file">
+         <input type="submit" value="Отправить">
+    </form><br>
+    <select>
+        <optgroup label="Цвет">
+          <option value="c1">Апельсиновый</option>
+          <option value="c2">Лимонный</option>
+           <option value="c3">Персиковый</option>
+        </optgroup>
+         <optgroup label="Тон">
+          <option value="s1">Светлый</option>
+          <option value="s2">Нормальный</option>
+           <option value="s3">Темный</option>
+       
+    </select>
+</body>
+</html>

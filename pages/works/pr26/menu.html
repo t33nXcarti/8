@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню ресторана</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Добавлен класс header-orange -->
+    <header class="header header-orange">
+        <div class="header-top">
+            <button class="menu-btn">☰</button>
+            <div class="search-bar">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Поиск блюд...">
+            </div>
+            <div class="location">
+                <span>📍</span>
+                <span>Москва</span>
+            </div>
+        </div>
+        <h1>Restaurant Menu</h1>
+    </header>
+
+    <nav class="categories">
+        <button class="category-btn active">Pizza</button>
+        <button class="category-btn">Burgers</button>
+        <button class="category-btn">Sushi</button>
+        <button class="category-btn">Salads</button>
+        <button class="category-btn">Drinks</button>
+    </nav>
+
+    <main class="menu-grid">
+        <div class="food-card">
+            <div class="food-image" style="background: linear-gradient(135deg, #ff6b6b, #feca57);"></div>
+            <div class="food-info">
+                <h3 class="food-name">Margherita Pizza</h3>
+                <p class="food-desc">Fresh mozzarella, tomato sauce, basil</p>
+                <div class="food-footer">
+                    <span class="price">₽890</span>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-image" style="background: linear-gradient(135deg, #ff9ff3, #feca57);"></div>
+            <div class="food-info">
+                <h3 class="food-name">Pepperoni Pizza</h3>
+                <p class="food-desc">Pepperoni, mozzarella, tomato sauce</p>
+                <div class="food-footer">
+                    <span class="price">₽990</span>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <div class="food-image" style="background: linear-gradient(135deg, #54a0ff, #5f27cd);"></div>
+            <div class="food-info">
+                <h3 class="food-name">Caesar Salad</h3>
+                <p class="food-desc">Chicken, lettuce, parmesan, croutons</p>
+                <div class="food-footer">
+                    <span class="price">₽650</span>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="menu.html" class="nav-item active">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-text">Home</span>
+        </a>
+        <a href="cart.html" class="nav-item">
+            <span class="nav-icon">🛒</span>
+            <span class="nav-text">Cart</span>
+            <span class="badge">3</span>
+        </a>
+        <a href="profile.html" class="nav-item">
+            <span class="nav-icon">👤</span>
+            <span class="nav-text">Profile</span>
+        </a>
+    </nav>
+</body>
+</html>

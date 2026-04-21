@@ -1,0 +1,163 @@
+body {
+    background: white;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Задание 1 */
+.box1 {
+    background: #bdbdab;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    transition: background-color 1s linear;
+}
+.box1:hover {
+    background: #ff7b29;
+}
+
+/* Задание 2 */
+.box2 {
+    background: #bdb3a4;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    transition: all 1s ease;
+}
+.box2:hover {
+    background: #ff7b29;
+    transform: scale(1.2);
+    border-radius: 25px;
+}
+
+/* Задание 3 */
+.container {
+    display: flex;
+    gap: 20px;
+}
+.card {
+    background: #bdb3a4;
+    width: 150px;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    color: white;
+    transition: all 0.3s;
+}
+.card:hover {
+    background: #ff7b29;
+    transform: scale(1.1);
+}
+
+/* Задание 5 - шарик */
+.stage {
+    background: #eaeedf;
+    width: 538px;
+    height: 150px;
+    position: relative;
+}
+.ball {
+    width: 50px;
+    height: 50px;
+    background: #ff7b29;
+    border-radius: 50%;
+    position: absolute;
+    animation: slide 3s infinite;
+}
+
+@keyframes slide {
+    0% { left: 0; top: 0; }
+    50% { left: 240px; top: 100px; }
+    100% { left: 480px; top: 0; }
+}
+
+/* Задание - исчезновение */
+.fade-text {
+    font-size: 32px;
+    font-weight: bold;
+    animation: fadeOut 2s forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 15px;
+}
+
+/* Задание 6 - 3D вращение и трансформации */
+figure {
+    margin: 0;
+    display: flex;
+}
+
+.original,
+.box {
+    border-radius: 6px;
+}
+
+.original {
+    background: #eaeaed;
+    border: 1px dashed #cfd5d5;
+    float: left;
+    margin: 12px 15px;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.spin {
+    cursor: pointer;
+    transform-style: preserve-3d;
+}
+
+.spin:hover {
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+/* Задание 7 - перемещение красного круга */
+.track {
+    background: #f0f0f0;
+    width: 538px;
+    height: 80px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    position: relative;
+    margin: 20px 0;
+    display: flex;
+}
+
+.red-dot {
+    width: 50px;
+    height: 50px;
+    background: #ff0000;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    animation: moveRed 4s infinite;
+}
+
+@keyframes moveRed {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: 480px;
+    }
+}
+
+

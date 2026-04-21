@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Наши питомцы — Щенята-Котята</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        header {
+            background-color: #4a90d9;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .page-title {
+            background-color: #e8f0fe;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .page-title h2 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+        }
+
+        .page-title p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        .filter-bar {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 25px 40px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: 1px solid #ddd;
+            background-color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #555;
+            text-decoration: none;
+        }
+
+        .filter-btn.active {
+            background-color: #4a90d9;
+            color: white;
+            border-color: #4a90d9;
+        }
+
+        .pets-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 10px 40px 50px 40px;
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .pet-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+            width: 280px;
+        }
+
+        .pet-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .pet-card-body {
+            padding: 20px;
+        }
+
+        .pet-card-body h3 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+            font-size: 20px;
+        }
+
+        .pet-card-body .pet-type {
+            color: #4a90d9;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .pet-card-body p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .pet-card-body .pet-info {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        .pet-link {
+            display: inline-block;
+            color: #4a90d9;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .pet-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ccc;
+            text-align: center;
+            padding: 25px 20px;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #4a90d9;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Щенята-Котята</h1>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="about.html">О нас</a>
+            <a href="pets.html">Наши питомцы</a>
+            <a href="volunteer.html">Волонтёрам</a>
+        </nav>
+    </header>
+
+    <div class="page-title">
+        <h2>Наши питомцы</h2>
+        <p>Эти животные ищут свой дом. Может быть, один из них — ваш?</p>
+    </div>
+
+    <div class="filter-bar">
+        <a href="pets.html" class="filter-btn active">Все</a>
+        <a href="pets.html" class="filter-btn">Щенки</a>
+        <a href="pets.html" class="filter-btn">Котята</a>
+        <a href="pets.html" class="filter-btn">Взрослые собаки</a>
+        <a href="pets.html" class="filter-btn">Взрослые кошки</a>
+    </div>
+
+    <div class="pets-grid">
+
+        <div class="pet-card">
+            <img src="https://placehold.co/400x300/d4e4f7/4a90d9?text=Барон" alt="Барон">
+            <div class="pet-card-body">
+                <h3>Барон</h3>
+                <div class="pet-type">Собака</div>
+                <div class="pet-info">
+                    <span>2 года</span>
+                    <span>Мальчик</span>
+                    <span>Средний</span>
+                </div>
+                <p>Спокойный и ласковый пёс. Любит гулять и играть с мячом. Отлично ладит с детьми.</p>
+                <a href="pet.html" class="pet-link">Подробнее о Бароне &rarr;</a>
+            </div>
+        </div>
+
+        <div class="pet-card">
+            <img src="https://placehold.co/400x300/f7d4d4/d94a4a?text=Муся" alt="Муся">
+            <div class="pet-card-body">
+                <h3>Муся</h3>
+                <div class="pet-type">Кошка</div>
+                <div class="pet-info">
+                    <span>1 год</span>
+                    <span>Девочка</span>
+                    <span>Маленькая</span>
+                </div>
+                <p>Игривая и любопытная кошечка. Обожает сидеть на коленях и мурлыкать.</p>
+                <a href="pet.html" class="pet-link">Подробнее о Мусе &rarr;</a>
+            </div>
+        </div>
+
+        <div class="pet-card">
+            <img src="https://placehold.co/400x300/d4f7d4/4ad96a?text=Рекс" alt="Рекс">
+            <div class="pet-card-body">
+                <h3>Рекс</h3>
+                <div class="pet-type">Собака</div>
+                <div class="pet-info">
+                    <span>6 месяцев</span>
+                    <span>Мальчик</span>
+                    <span>Крупный</span>
+                </div>
+                <p>Энергичный щенок, полный жизни. Быстро учится и обожает внимание.</p>
+                <a href="pet.html" class="pet-link">Подробнее о Рексе &rarr;</a>
+            </div>
+        </div>
+
+        <div class="pet-card">
+            <img src="https://placehold.co/400x300/f7f0d4/d9b84a?text=Рыжик" alt="Рыжик">
+            <div class="pet-card-body">
+                <h3>Рыжик</h3>
+                <div class="pet-type">Кот</div>
+                <div class="pet-info">
+                    <span>3 года</span>
+                    <span>Мальчик</span>
+                    <span>Средний</span>
+                </div>
+                <p>Независимый, но ласковый кот. Любит солнечные подоконники и тёплые пледы.</p>
+                <a href="pet.html" class="pet-link">Подробнее о Рыжике &rarr;</a>
+            </div>
+        </div>
+
+        <div class="pet-card">
+            <img src="https://placehold.co/400x300/e8d4f7/904ad9?text=Белка" alt="Белка">
+            <div class="pet-card-body">
+                <h3>Белка</h3>
+                <div class="pet-type">Кошка</div>
+                <div class="pet-info">
+                    <span>4 месяца</span>
+                    <span>Девочка</span>
+                    <span>Маленькая</span>
+                </div>
+                <p>Маленькая и шустрая малышка. Очень общительная и любит играть с другими кошками.</p>
+                <a href="pet.html" class="pet-link">Подробнее о Белке &rarr;</a>
+            </div>
+        </div>
+
+        <div class="pet-card">
+            <img src="https://placehold.co/400x300/d4e4f7/4a90d9?text=Тузик" alt="Тузик">
+            <div class="pet-card-body">
+                <h3>Тузик</h3>
+                <div class="pet-type">Собака</div>
+                <div class="pet-info">
+                    <span>4 года</span>
+                    <span>Мальчик</span>
+                    <span>Маленький</span>
+                </div>
+                <p>Весёлый и преданный друг. Идеален для квартиры. Приучен к прогулкам.</p>
+                <a href="pet.html" class="pet-link">Подробнее о Тузике &rarr;</a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Щенята-Котята &copy; 2026 | Приют для бездомных животных</p>
+        <p>Адрес: г. Москва, ул. Лесная, д. 12 | Телефон: +7 (999) 123-45-67</p>
+    </footer>
+
+</body>
+</html>

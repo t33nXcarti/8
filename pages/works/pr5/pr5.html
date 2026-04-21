@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav ul {
+            display: flex;
+        }
+
+        nav ul li {
+            color: white;
+            padding: 5px 10px;
+        }
+
+        nav ul li:hover {
+            background-color: #555;
+        }
+
+       
+        .content {
+            display: flex;
+            padding: 20px;
+        }
+
+        .main {
+            background-color: white;
+            padding: 20px;
+        }
+
+        aside {
+            background-color: #e0e0e0;
+            padding: 15px;
+        }
+
+
+       
+        .columns {
+            display: flex;
+        }
+
+        .column {
+            flex: 1;
+            background-color: #fff;
+            padding: 15px;
+        }
+
+        .column img {
+            width: 100px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    
+    <nav>
+        <ul>
+            <li>Главная</li>
+            <li>Новости</li>
+            <li>Навыки</li>
+            <li>Курсы</li>
+            <li>Контакты</li>
+        </ul>
+    </nav>
+
+    
+    <div class="content">
+        <div class="main">
+            <h2>Новости</h2>
+            <p>Здесь размещается основной контент страницы новостей.</p>
+            <div class="columns">
+                <div class="column">
+                    <img src="img/facebook.png" alt="курс 1">
+                    <h4>Мои навыки</h4>
+                    <p>умею на питоне писать програмки и тд</p>
+                </div>
+                <div class="column">
+                    <img src="img/BG1.png" alt="курс 2">
+                    <h4>Пройденные курсы</h4>
+                    <p>Python</p>
+                </div>
+                <div class="column">
+                    <img src="img/icon3.png" alt="курс 3">
+                    <h4>я водолаз</h4>
+                    <p>меня укусил паук</p>
+        </div>
+        <aside>
+            <h3>Доп. информация</h3>
+            <p>Город: Пермь</p>
+            <p>Погода: +1°C, облачно</p>
+            <p>Дата: 5 декабря 2025</p>
+        </aside>
+    </div>
+
+</body>
+</html>
